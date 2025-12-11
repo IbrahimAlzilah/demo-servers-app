@@ -161,7 +161,7 @@ h3 {
 }
 
 .section {
-    padding: 6rem 0;
+    padding: 4rem 0;
     position: relative;
     z-index: 1;
 }
@@ -320,6 +320,7 @@ h3 {
     align-items: center;
     justify-content: center;
     color: var(--text-primary);
+    background-color: var(--bg-surface-secondary);
     transition: background var(--duration-fast) ease, transform var(--duration-fast) var(--ease-spring);
 }
 
@@ -511,7 +512,7 @@ h3 {
 
 @media (min-width: 1200px) {
     .hero-title {
-        font-size: 4.5rem;
+        font-size: 4rem;
     }
 }
 
@@ -1579,4 +1580,10 @@ html[dir="rtl"] .mobile-nav-overlay {
     color: var(--text-secondary);
     border-top: 1px solid var(--border-subtle);
     padding-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .hidden-sm {
+        display: none;
+    }
 }
