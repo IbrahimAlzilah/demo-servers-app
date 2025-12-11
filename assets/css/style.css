@@ -1349,7 +1349,7 @@ html[dir="rtl"] .btn-primary:hover .btn-arrow {
 
 .ui-content,
 .app-body {
-    padding: 0 12px 12px;
+    padding: 0 24px 20px;
 }
 
 .ui-line,
@@ -1490,7 +1490,7 @@ html[dir="rtl"] .btn-primary:hover .btn-arrow {
 }
 
 /* Add a subtle gradient border */
-/* .mobile-nav-content::before {
+.mobile-nav-content::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1499,7 +1499,7 @@ html[dir="rtl"] .btn-primary:hover .btn-arrow {
     width: 1px;
     background: linear-gradient(to bottom, transparent, var(--accent-primary), transparent);
     opacity: 0.5;
-} */
+}
 
 .mobile-nav-overlay.active .mobile-nav-content {
     transform: translateX(0);
@@ -1513,10 +1513,10 @@ html[dir="rtl"] .mobile-nav-content {
     box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
 }
 
-/* html[dir="rtl"] .mobile-nav-content::before {
+html[dir="rtl"] .mobile-nav-content::before {
     left: auto;
     right: 0;
-} */
+}
 
 html[dir="rtl"] .mobile-nav-overlay.active .mobile-nav-content {
     transform: translateX(0);
