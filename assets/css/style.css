@@ -1473,7 +1473,7 @@ html[dir="rtl"] .btn-primary:hover .btn-arrow {
 
     .mobile-nav-content {
         width: 100%;
-        max-width: 340px;
+        max-width: 300px;
         height: 100dvh;
         /* Fix: Dynamic viewport height */
         background: var(--bg-surface);
