@@ -761,19 +761,19 @@ h3 {
 /* Placeholder colors for design cards */
 /* Design Card Images */
 .p1 {
-    background-image: url('./assets/images/branding.png');
+    background-image: url('../images/branding.png');
 }
 
 .p2 {
-    background-image: url('./assets/images/ui.png');
+    background-image: url('../images/ui.png');
 }
 
 .p3 {
-    background-image: url('./assets/images/print.png');
+    background-image: url('../images/print.png');
 }
 
 .p4 {
-    background-image: url('./assets/images/motion.png');
+    background-image: url('../images/motion.png');
 }
 
 /* Mobile Menu */
