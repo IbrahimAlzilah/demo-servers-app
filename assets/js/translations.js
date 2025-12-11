@@ -9,7 +9,7 @@ const translations = {
         nav_marketing: "التسويق",
         nav_design: "التصميم",
         btn_start: "ابدأ مشروعك",
-        hero_title: 'نصنع المستقبل الرقمي لأعمالك',
+        hero_title: 'نصنع المستقبل <br><span class="accent-text">الرقمي</span> لأعمالك',
         hero_desc: "وكالة إبداعية تجمع بين دقة التكنولوجيا وجماليات التصميم لتقديم تجربة مستخدم لا تُنسى.",
         btn_discover: "اكتشف خدماتنا",
         btn_portfolio: "معرض الأعمال",

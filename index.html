@@ -109,7 +109,8 @@
                             <span class="pulsing-dot"></span>
                             <span data-i18n="hero_badge">شريكك التقني الموثوق</span>
                         </div>
-                        <h1 class="hero-title" data-i18n="hero_title">نصنع المستقبل الرقمي لأعمالك</h1>
+                        <h1 class="hero-title" data-i18n="hero_title">نصنع المستقبل <br><span
+                                class="accent-text">الرقمي</span> لأعمالك</h1>
                         <p class="hero-lead" data-i18n="hero_desc">وكالة إبداعية تجمع بين دقة التكنولوجيا وجماليات
                             التصميم
                             لتقديم تجربة مستخدم لا تُنسى.</p>
@@ -140,55 +141,68 @@
                     </div>
 
                     <div class="hero-visual">
-                        <div class="dashboard-mockup">
-                            <!-- Sidebar -->
-                            <div class="dash-sidebar">
-                                <div class="dash-icon active"></div>
-                                <div class="dash-icon"></div>
-                                <div class="dash-icon"></div>
-                                <div class="dash-icon"></div>
-                            </div>
-                            <!-- Main Content -->
-                            <div class="dash-main">
-                                <!-- Header -->
-                                <div class="dash-header">
-                                    <div class="dash-search"></div>
-                                    <div class="dash-user"></div>
+                        <div class="tech-stack-container">
+                            <!-- Background Glow -->
+                            <div class="tech-glow"></div>
+
+                            <!-- Layer 1: Server/Infrastructure Base -->
+                            <div class="tech-card server-layer floating-slow">
+                                <div class="server-lights">
+                                    <span></span><span></span><span></span>
                                 </div>
-                                <!-- Body -->
-                                <div class="dash-content">
-                                    <div class="dash-card large">
-                                        <div class="dash-fake-chart">
-                                            <div class="dash-bar h-1"></div>
-                                            <div class="dash-bar h-2"></div>
-                                            <div class="dash-bar h-3"></div>
-                                            <div class="dash-bar h-4"></div>
-                                            <div class="dash-bar h-2"></div>
-                                            <div class="dash-bar h-1"></div>
-                                            <div class="dash-bar h-3"></div>
-                                            <div class="dash-bar h-4"></div>
-                                            <div class="dash-bar h-2"></div>
-                                        </div>
+                                <div class="server-grill"></div>
+                            </div>
+
+                            <!-- Layer 2: Main App Window -->
+                            <div class="tech-card app-layer floating-medium">
+                                <div class="app-header">
+                                    <div class="app-dot red"></div>
+                                    <div class="app-dot yellow"></div>
+                                    <div class="app-dot green"></div>
+                                </div>
+                                <div class="app-content">
+                                    <div class="code-row">
+                                        <span class="c-purple">const</span> <span class="c-blue">nexus</span> = <span
+                                            class="c-yellow">new</span> <span class="c-green">Future()</span>;
                                     </div>
-                                    <div class="dash-card">
-                                        <div class="dash-stat-row">
-                                            <div class="dash-stat-lbl"></div>
-                                            <div class="dash-stat-val"></div>
-                                        </div>
-                                        <div class="dash-stat-row" style="margin-top:auto">
-                                            <div class="dash-stat-val" style="width: 60%"></div>
-                                        </div>
+                                    <div class="code-row indent">
+                                        <span class="c-blue">nexus</span>.<span class="c-yellow">build</span>({
                                     </div>
-                                    <div class="dash-card">
-                                        <div class="dash-stat-row">
-                                            <div class="dash-stat-lbl"></div>
-                                        </div>
-                                        <div class="dash-fake-chart">
-                                            <div class="dash-bar h-2"></div>
-                                            <div class="dash-bar h-1"></div>
-                                            <div class="dash-bar h-3"></div>
-                                        </div>
+                                    <div class="code-row double-indent">
+                                        <span class="c-prop">quality:</span> <span class="c-orange">'premium'</span>,
                                     </div>
+                                    <div class="code-row double-indent">
+                                        <span class="c-prop">speed:</span> <span class="c-orange">'blazing'</span>
+                                    </div>
+                                    <div class="code-row indent">
+                                        });
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Layer 3: Marketing/Growth Widget -->
+                            <div class="tech-widget marketing-layer floating-fast">
+                                <div class="widget-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                                    </svg>
+                                </div>
+                                <div class="widget-data">
+                                    <span class="lbl">Reach</span>
+                                    <span class="val">+240%</span>
+                                </div>
+                            </div>
+
+                            <!-- Layer 4: Design Swatch -->
+                            <div class="tech-widget design-layer floating-reverse-slow">
+                                <div class="color-swatch-stack">
+                                    <div class="swatch s1"></div>
+                                    <div class="swatch s2"></div>
+                                    <div class="swatch s3"></div>
                                 </div>
                             </div>
                         </div>

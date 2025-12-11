@@ -348,8 +348,8 @@ h3 {
     padding-top: calc(var(--header-height) + 4rem);
     padding-bottom: 8rem;
     overflow: hidden;
-    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
-    color: #fff;
+    /* fallback background */
+    background: var(--bg-page);
 }
 
 /* Background Elements */
@@ -367,9 +367,9 @@ h3 {
     right: -10%;
     width: 60%;
     height: 60%;
-    background: radial-gradient(circle, rgba(124, 58, 237, 0.3) 0%, rgba(0, 0, 0, 0) 70%);
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
     filter: blur(80px);
-    opacity: 0.6;
+    opacity: 0.8;
     animation: moveMesh 10s ease-in-out infinite alternate;
 }
 
@@ -381,13 +381,12 @@ h3 {
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 50px 50px;
+        linear-gradient(rgba(130, 130, 130, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(130, 130, 130, 0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
     mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
     -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
     animation: moveGrid 20s linear infinite;
-    opacity: 0.2;
 }
 
 @keyframes moveGrid {
@@ -498,13 +497,11 @@ h3 {
 .hero-title {
     font-size: 2.75rem;
     margin-bottom: 1.5rem;
-    color: #fff;
+    color: var(--text-primary);
     line-height: 1.15;
     opacity: 0;
     animation: fadeUp 0.8s var(--ease-smooth) forwards 0.2s;
 }
-
-
 
 @media (min-width: 768px) {
     .hero-title {
@@ -520,7 +517,7 @@ h3 {
 
 .hero-lead {
     font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-secondary);
     margin-bottom: 2.5rem;
     line-height: 1.7;
     max-width: 580px;
@@ -559,27 +556,6 @@ h3 {
     transition: transform 0.3s ease;
 }
 
-.hero .btn-primary {
-    background-color: #fff;
-    color: #1e1b4b;
-    /* Dark Blue */
-}
-
-.hero .btn-primary:hover {
-    background-color: var(--accent-primary);
-    color: #fff;
-}
-
-.hero .btn-outline {
-    border-color: rgba(255, 255, 255, 0.3);
-    color: #fff;
-}
-
-.hero .btn-outline:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: #fff;
-}
-
 .btn-primary:hover .btn-arrow {
     transform: translateX(4px);
 }
@@ -612,21 +588,21 @@ html[dir="rtl"] .btn-primary:hover .btn-arrow {
 .stat-number {
     font-size: 1.75rem;
     font-weight: 800;
-    color: #fff;
+    color: var(--text-primary);
     line-height: 1;
     margin-bottom: 0.25rem;
 }
 
 .stat-label {
     font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--text-secondary);
     font-weight: 500;
 }
 
 .stat-divider {
     width: 1px;
     height: 48px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--border-subtle);
 }
 
 /* --- Hero Visual (Tech Stack) --- */
@@ -819,172 +795,9 @@ html[dir="rtl"] .btn-primary:hover .btn-arrow {
     color: #d97706;
 }
 
-
-/* --- Dashboard Mockup (CSS Shapes) --- */
-.dashboard-mockup {
-    position: relative;
-    width: 500px;
-    height: 340px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
-    border-radius: 12px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-    display: flex;
-    overflow: hidden;
-    transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
-    transition: transform 0.5s ease;
-    animation: float-dashboard 6s ease-in-out infinite;
+.c-green {
+    color: #10b981;
 }
-
-.dashboard-mockup:hover {
-    transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
-}
-
-@keyframes float-dashboard {
-
-    0%,
-    100% {
-        transform: perspective(1000px) rotateY(-5deg) rotateX(2deg) translateY(0);
-    }
-
-    50% {
-        transform: perspective(1000px) rotateY(-5deg) rotateX(2deg) translateY(-15px);
-    }
-}
-
-.dash-sidebar {
-    width: 80px;
-    background: rgba(0, 0, 0, 0.2);
-    border-left: 1px solid rgba(255, 255, 255, 0.05);
-    /* RTL Sidebar on right usually, but in visual usually left unless mirrored. Let's assume standard visual left-sidebar for international look or right if strictly RTL. User asked RTL layout but Mockup can be standard. Let's stick to standard left sidebar for visual balance. */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-    gap: 15px;
-}
-
-[dir="rtl"] .dash-sidebar {
-    border-left: none;
-    border-right: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.dash-icon {
-    width: 32px;
-    height: 32px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-}
-
-.dash-icon.active {
-    background: var(--accent-primary);
-    box-shadow: 0 0 15px rgba(197, 157, 36, 0.4);
-}
-
-.dash-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.dash-header {
-    height: 50px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-}
-
-.dash-search {
-    width: 120px;
-    height: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-}
-
-.dash-user {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.dash-content {
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 15px;
-    height: 100%;
-}
-
-.dash-card {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.dash-card.large {
-    grid-column: span 2;
-    height: 100px;
-}
-
-.dash-fake-chart {
-    flex: 1;
-    display: flex;
-    align-items: flex-end;
-    gap: 8px;
-    padding-top: 5px;
-}
-
-.dash-bar {
-    flex: 1;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 2px;
-}
-
-.dash-bar.h-1 {
-    height: 40%;
-}
-
-.dash-bar.h-2 {
-    height: 70%;
-    background: var(--accent-primary);
-}
-
-.dash-bar.h-3 {
-    height: 50%;
-}
-
-.dash-bar.h-4 {
-    height: 85%;
-}
-
-.dash-stat-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.dash-stat-val {
-    width: 40px;
-    height: 8px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 2px;
-}
-
-.dash-stat-lbl {
-    width: 20px;
-    height: 6px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 2px;
-}
-
-
 
 .c-prop {
     color: #6366f1;
