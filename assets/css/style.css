@@ -478,7 +478,7 @@ h3 {
     background: var(--bg-surface);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
-    padding: 2.5rem;
+    padding: 2rem;
     position: relative;
     overflow: hidden;
     transition: all var(--duration-normal) var(--ease-smooth);
@@ -531,7 +531,7 @@ h3 {
 .service-card:hover .icon-box {
     background: var(--accent-primary);
     color: #fff;
-    transform: scale(1.1) rotate(5deg);
+    /* transform: scale(1.1) rotate(5deg); */
 }
 
 .icon-box.small {
@@ -917,4 +917,47 @@ html[dir="rtl"] .mobile-nav-overlay {
 .footer-social a {
     color: var(--text-primary);
     font-weight: 500;
+}
+
+/* --- LTR / English Support --- */
+[lang="en"] {
+    --font-heading: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+[dir="ltr"] .badge {
+    left: auto;
+    right: 1.5rem;
+}
+
+[dir="ltr"] .micro-features li {
+    margin-left: 0;
+    margin-right: 0.5rem;
+}
+
+[dir="ltr"] .card-glow {
+    right: auto;
+    left: -100px;
+}
+
+/* Fix mobile nav overlay in LTR */
+[dir="ltr"] .mobile-nav-overlay {
+    justify-content: flex-start;
+    /* Align menu to left in LTR */
+}
+
+/* But wait, in LTR menu usually slides from Right or Left? */
+/* Code at 802 suggests it slides from Right (translateX 100%). */
+/* If justify-content is flex-start (Left), but transform is 100% (Right), it might be weird. */
+/* Let's stick to default behavior: flex-end (Right) for LTR too, sliding from Right. */
+/* So actually, no override needed for mobile-nav-overlay if we want Right-side menu in LTR too. */
+/* If we want Left-side menu in LTR (standard sidebars), then we need adjustments. */
+/* Let's assume standard behavior: Menu usually on 'Start' side or 'End' side? */
+/* In RTL, existing code puts it on Left (End side). */
+/* In LTR, default code puts it on Right (End side). */
+/* So it's consistent (Always End side). I will leave mobile nav as is. */
+
+/* Flip direction for specific transforms if needed */
+[dir="ltr"] .btn-text:hover {
+    transform: translateX(5px);
 }

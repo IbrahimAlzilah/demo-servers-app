@@ -1,5 +1,44 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- Language Management ---
+    const langBtn = document.getElementById('lang-toggle');
+    const langBtnText = langBtn.querySelector('span');
+
+    // Check saved language or default to Arabic
+    const savedLang = localStorage.getItem('lang') || 'ar';
+
+    function setLanguage(lang) {
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        localStorage.setItem('lang', lang);
+
+        // Update Button (Show the OTHER language)
+        if (langBtnText) {
+            langBtnText.textContent = lang === 'ar' ? 'EN' : 'AR';
+        }
+
+        // Update Text Content
+        if (typeof translations !== 'undefined') {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+        }
+    }
+
+    // Initialize Language
+    setLanguage(savedLang);
+
+    if (langBtn) {
+        langBtn.addEventListener('click', () => {
+            const current = document.documentElement.lang;
+            const next = current === 'ar' ? 'en' : 'ar';
+            setLanguage(next);
+        });
+    }
+
     // --- Theme Management ---
     const themeBtn = document.getElementById('theme-toggle');
     const html = document.documentElement;
