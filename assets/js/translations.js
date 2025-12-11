@@ -1,12 +1,15 @@
 const translations = {
     ar: {
         meta_title: "NEXUS | حلول رقمية متكاملة",
+        hero_badge: "شريكك التقني الموثوق",
+        stat_clients: "عميل سعيد",
+        stat_projects: "مشروع ناجح",
         nav_servers: "البنية التحتية",
         nav_apps: "التطبيقات",
         nav_marketing: "التسويق",
         nav_design: "التصميم",
         btn_start: "ابدأ مشروعك",
-        hero_title: 'نصنع المستقبل <br><span class="accent-text">الرقمي</span> لأعمالك',
+        hero_title: 'نصنع المستقبل الرقمي لأعمالك',
         hero_desc: "وكالة إبداعية تجمع بين دقة التكنولوجيا وجماليات التصميم لتقديم تجربة مستخدم لا تُنسى.",
         btn_discover: "اكتشف خدماتنا",
         btn_portfolio: "معرض الأعمال",
@@ -70,6 +73,9 @@ const translations = {
     },
     en: {
         meta_title: "NEXUS | Integrated Digital Solutions",
+        hero_badge: "Your Trusted Tech Partner",
+        stat_clients: "Happy Clients",
+        stat_projects: "Successful Projects",
         nav_servers: "Infrastructure",
         nav_apps: "Applications",
         nav_marketing: "Marketing",
